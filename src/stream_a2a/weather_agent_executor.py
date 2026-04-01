@@ -15,7 +15,7 @@ from openai import OpenAI,AsyncOpenAI
 
 client = AsyncOpenAI(
     base_url='http://183.147.142.111:30000/v1',
-    api_key= os.getenv('ANTHROPIC_API_KEY')
+    api_key= os.getenv('ANTHROPIC_API_KEY', 'sk-xxx')
 )
 
 class WeatherAgentExecutor(AgentExecutor):
